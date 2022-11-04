@@ -3,6 +3,6 @@ version: '3.8'
 services:
   web:
     container_name: cdnsave
-    image: "docker.pkg.github.com/dschek/sdnsave/cdnsave:latest"
+    image: "docker.pkg.github.com/dschek/cdnsave/cdnsave:latest"
     ports:
       - "9302:8080"
