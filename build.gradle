@@ -6,7 +6,7 @@ plugins {
 
 group = 'com.cdn'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '18'
+sourceCompatibility = '16'
 
 repositories {
     mavenCentral()
