@@ -5,4 +5,4 @@ services:
     container_name: cdnsave
     image: "docker.pkg.github.com/dschek/save/save:latest"
     ports:
-      - "9000:8080"
+      - "9302:8080"
