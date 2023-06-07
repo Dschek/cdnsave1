@@ -16,10 +16,10 @@ jobs:
         run: echo "::set-output name=NAME::cdnsave"
       - uses: actions/checkout@v3
       - name: Set up JDK 20
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v3.9.0
         with:
           java-version: '20'
-          distribution: 'temurin'
+          distribution: 'adopt'
           cache: gradle
       - name: Add Gradle Wrapper for strating Gradlew
         run: gradle wrapper
