@@ -1,4 +1,4 @@
-FROM openjdk:16-jdk-alpine
+FROM openjdk:20-jdk
 
 WORKDIR /home/save
 COPY ./build/libs/app.jar app.jar
