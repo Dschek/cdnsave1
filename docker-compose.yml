@@ -7,8 +7,8 @@ services:
     ports:
       - "9302:8080"
     environment:
-      - port=$port
-      - host=$host
-      - login=$login
-      - password=$password
-      - imgUrl=$imgUrl
+      - sftpport=$sftpport
+      - sftphost=$sftphost
+      - sftplogin=$sftplogin
+      - sftppassword=$sftppassword
+      - imgurl=$imgurl

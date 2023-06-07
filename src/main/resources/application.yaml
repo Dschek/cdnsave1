@@ -1,11 +1,11 @@
 sftp:
-  port: ${port:21}
-  host: ${host:cdn.tydi.net}
-  login: ${login:user123}
-  password: ${password:12345678}
+  port: ${sftpport:21}
+  host: ${sftphost:cdn.tydi.net}
+  login: ${sftplogin:user123}
+  password: ${sftppassword:12345678}
 app:
   host:
-    img: ${imgUrl:https://img.tydi.ru/}
+    img: ${imgurl:https://img.tydi.ru/}
 server:
   port: ${PORT:8080}
   tomcat:
