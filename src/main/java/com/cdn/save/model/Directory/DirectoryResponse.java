@@ -1,6 +1,5 @@
 package com.cdn.save.model.Directory;
 
-import lombok.Builder;
 import lombok.Data;
 
 @Data
