@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -19,20 +19,16 @@ public class RestFileOperationController {
     private StorageService storageService;
 
     @PostMapping("/add")
-    public ResponseEntity<FileResponse> addFile(@RequestParam FileRequest fileRequest) {
+    public ResponseEntity<FileResponse> addFile(@RequestBody FileRequest fileRequest) {
         return new ResponseEntity<>(storageService.addFile(fileRequest), HttpStatus.OK);
     }
-    @PostMapping("/rm")
-    public ResponseEntity<FileResponse> rmFile(@RequestParam FileRequest fileRequest) {
-        return new ResponseEntity<>(storageService.rmFile(fileRequest), HttpStatus.OK);
-    }
     @PostMapping("/mkdir")
-    public ResponseEntity<DirectoryResponse> mkDir(@RequestParam DirectoryRequest directoryRequest) {
+    public ResponseEntity<DirectoryResponse> mkDir(@RequestBody DirectoryRequest directoryRequest) {
         return new ResponseEntity<>(storageService.mkDir(directoryRequest), HttpStatus.OK);
     }
-    @PostMapping("/rmdir")
-    public ResponseEntity<DirectoryResponse> rmDir(@RequestParam DirectoryRequest directoryRequest) {
-        return new ResponseEntity<>(storageService.rmDir(directoryRequest), HttpStatus.OK);
+    @PostMapping("/rm")
+    public ResponseEntity<DirectoryResponse> rmDir(@RequestBody DirectoryRequest directoryRequest) {
+        return new ResponseEntity<>(storageService.rm(directoryRequest), HttpStatus.OK);
     }
 
 //    TODO load files and directories from client directory

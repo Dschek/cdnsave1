@@ -6,3 +6,9 @@ services:
     image: "docker.pkg.github.com/dschek/cdnsave/cdnsave:latest"
     ports:
       - "9302:8080"
+    environment:
+      - port=$port
+      - host=$host
+      - login=$login
+      - password=$password
+      - imgUrl=$imgUrl
